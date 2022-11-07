@@ -139,18 +139,19 @@ header {
     width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     background-color: whitesmoke;
     box-shadow: 0 2px 10px rgb(0, 0, 0, 0.5);
 }
-.project-tile img {
+#spyro-screenshot {
     width: 1000px;
 }
 .project-tile p {
     text-align: center;
     color: darkorchid;
     font-family: 'Open Sans', sans-serif;
+    display: block;
 }
 .project-tile p:hover {
     color: darkmagenta;
