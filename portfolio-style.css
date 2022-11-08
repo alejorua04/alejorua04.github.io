@@ -52,6 +52,39 @@ header {
     color: white;
     background-color: darkorchid;
 }
+@media screen and (max-width: 500px) {
+    header {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+    }
+    #my-name {
+        display: none;
+    }
+    #navbar {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    #navbar ul {
+        width: 100%;
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    #navbar ul a {
+        text-align: center;
+        display: block;
+        width: 482px;
+        margin: 0;
+        border-radius: 0;
+        padding: 13px 0;
+    }
+}
 
 
 /*MAIN OF THE WEBPAGE*/
@@ -118,6 +151,26 @@ header {
 #box-illustration {
     width: 700px;
 }
+@media screen and (max-width: 500px) {
+    main {
+        position: relative;
+        top: 150px;
+        height: 1000px;
+    }
+    #presentation {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #title-and-description p {
+        max-width: 400px;
+    }
+    #box-illustration {
+        width: 400px;
+    }
+}
 
 
 /*Projects*/
@@ -158,6 +211,18 @@ header {
 }
 .project-tile a {
     text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+    #projects {
+        width: 100%;
+        height: 70vh;
+    }
+    .project-tile {
+        max-width: 400px;
+    }
+    #spyro-screenshot {
+        max-width: 400px;
+    }
 }
 
 
@@ -208,4 +273,24 @@ header {
     color: whitesmoke;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
+}
+@media screen and (max-width: 500px) {
+    footer {
+        position: relative;
+        top: 1180px;
+    }
+    #contact {
+        position: absolute;
+        bottom: 0;
+    }
+    .phrase-box p {
+        font-size: 2.5rem;
+        padding: 0;
+    }
+    .contact-box {
+        width: 100%;
+    }
+    .contact-box a {
+        font-size: 0.9rem;
+    }
 }
