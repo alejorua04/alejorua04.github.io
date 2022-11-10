@@ -7,13 +7,73 @@ html, body {
 }
 
 
+/*UNIVERSAL SELECTOR AND COLUMNS*/
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+@media only screen and (max-width: 992px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
 /*HEADER OF THE WEBPAGE*/
 
 
 header {
     width: 100%;
     height: 80px;
-    background-color: whitesmoke;
+    background-color: white;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -21,12 +81,10 @@ header {
     align-items: center;
     top: 0;
     box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.4);
+    z-index: 1;
 }
-#my-name {
-    font-family: 'Asap', sans-serif;
-    padding: 0;
-    margin: 0;
-    color: darkorchid;
+#logo {
+    height: 80px;
 }
 #navbar {
     display: flex;
@@ -40,7 +98,7 @@ header {
 }
 #navbar ul a {
     text-decoration: none;
-    color: darkorchid;
+    color: #9932cc;
     padding: 10px 20px;
     margin: 0 25px;
     font-family: 'Open Sans', sans-serif;
@@ -52,37 +110,9 @@ header {
     color: white;
     background-color: darkorchid;
 }
-@media screen and (max-width: 500px) {
-    header {
-        width: 100%;
-        height: auto;
-        z-index: 1;
-        padding: 0;
-        margin: 0;
-    }
-    #my-name {
+@media only screen and (max-width: 768px) {
+    #logo {
         display: none;
-    }
-    #navbar {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-}
-@media screen and (max-width: 500px) {
-    #navbar ul {
-        width: 100%;
-        display: block;
-        padding: 0;
-        margin: 0;
-    }
-    #navbar ul a {
-        text-align: center;
-        display: block;
-        width: 482px;
-        margin: 0;
-        border-radius: 0;
-        padding: 13px 0;
     }
 }
 
@@ -94,7 +124,7 @@ header {
 
 
 #front-page {
-    background-color: darkorchid;
+    background-color: white;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -108,7 +138,7 @@ header {
 #front-page h2, #front-page p {
     padding: 0;
     margin: 0;
-    color: whitesmoke;
+    color: darkorchid;
 }
 #front-page h2 {
     font-size: 5rem;
@@ -124,15 +154,16 @@ header {
 
 
 #presentation {
-    width: 100%;
-    height: 100vh;
+    padding: 100px 0;
+    background-color: darkorchid;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 #title-and-description {
-    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,32 +174,26 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     color: darkorchid;
+    color: white;
+    padding-bottom: 30px;
 }
 #title-and-description p {
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    color: white;
 }
 #box-illustration {
-    width: 700px;
+    width: 100%;
 }
-@media screen and (max-width: 500px) {
-    main {
-        position: relative;
-        top: 150px;
-        height: 1000px;
-    }
+@media only screen and (max-width: 768px) {
     #presentation {
-        width: 100%;
-        display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
     }
-    #title-and-description p {
-        max-width: 400px;
-    }
-    #box-illustration {
-        width: 400px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #presentation {
+        flex-direction: column;
     }
 }
 
@@ -178,18 +203,18 @@ header {
 
 #projects {
     width: 100%;
-    height: 115vh;
     background-color: white;
 }
 #projects h2 {
     text-align: center;
     margin: 0;
-    padding: 15px 0 60px 0;
+    padding: 60px 0 60px 0;
     font-family: 'Open Sans', sans-serif;
     color: darkorchid;
+    font-size: 2em;
 }
 .project-tile {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -198,13 +223,14 @@ header {
     box-shadow: 0 2px 10px rgb(0, 0, 0, 0.5);
 }
 #spyro-screenshot {
-    width: 1000px;
+    width: 100%;
 }
 .project-tile p {
     text-align: center;
     color: darkorchid;
     font-family: 'Open Sans', sans-serif;
     display: block;
+    padding: 20px 0;
 }
 .project-tile p:hover {
     color: darkmagenta;
@@ -212,23 +238,13 @@ header {
 .project-tile a {
     text-decoration: none;
 }
-@media screen and (max-width: 500px) {
-    #projects {
-        width: 100%;
-        height: 70vh;
-    }
-    .project-tile {
-        max-width: 400px;
-    }
-    #spyro-screenshot {
-        max-width: 400px;
-    }
-}
-
 
 /*FOOTER OF THE WEBPAGE*/
 
 
+footer {
+    margin-top: 90px;
+}
 #contact {
     width: 100%;
     background-color: darkorchid;
@@ -242,7 +258,7 @@ header {
     color: whitesmoke;
     font-family: 'Open Sans', sans-serif;
     display: block;
-    padding: 80px 0 0 0;
+    padding: 40px 40px;
     font-size: 4rem;
     /*border:  1px solid black;*/
 }
@@ -250,16 +266,19 @@ header {
     width: 60%;
     display: flex;
     margin: 0 auto;
-    padding: 0 0 50px 0;
+    padding: 25px 0;
     flex-direction: row;
     justify-content: space-evenly;
-    /*border: 1px solid black;*/
 }
 .contact-box a {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     color: whitesmoke;
     font-size: 1.3rem;
+    transition: 0.4s;
+}
+.contact-box a:hover {
+    transform: translateY(-8px);
 }
 .contact-box i {
     padding: 0 10px;
@@ -274,23 +293,36 @@ header {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
 }
-@media screen and (max-width: 500px) {
-    footer {
-        position: relative;
-        top: 1180px;
+@media only screen and (max-width: 600px) {
+    .contact-box {
+        width: 100%;
     }
-    #contact {
-        position: absolute;
-        bottom: 0;
+    .contact-box a {
+        font-size: 0.8em;
     }
+}
+@media only screen and (max-width: 768px) {
     .phrase-box p {
-        font-size: 2.5rem;
-        padding: 0;
+        width: 100%;
+        font-size: 2.5em;
     }
     .contact-box {
         width: 100%;
     }
     .contact-box a {
-        font-size: 0.9rem;
+        font-size: 0.9em;
+    }
+}
+@media screen  and (min-width: 768px) and (max-width: 992px) {
+    .contact-box {
+        width: 80%;
+    }
+    .contact-box a {
+        font-size: 1.2em;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .contact-box a {
+        font-size: 1.2em;
     }
 }

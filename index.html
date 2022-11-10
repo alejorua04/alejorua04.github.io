@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <title>Personal Portfolio</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,7 @@
     </head>
     <body>
         <header>
-            <h1 id="my-name">Daniel Rúa</h1>
+            <img src="Mi proyecto.png" alt="Logo" id="logo">
             <nav id="navbar">
                 <ul>
                     <li><a href="#presentation">About</a></li>
@@ -28,30 +29,34 @@
                 <h2>Daniel Rúa</h2>
                 <p>Web Developer</p>
             </section>
-            <section id="presentation">
-                <div id="title-and-description">
-                    <h2>Hi, I'm Daniel. A web developer</h2>
-                    <p>A hard working guy who is always looking for new things to learn. I am a Digital Animator
-                        switching to a Front End Developer with experience 
-                        in HTML, CSS  and JavaScript. I have helped customers to materialize their 
-                        ideas into awesome animations that caught up the attention of many people 
-                        in their social medias, increasing the number of followers.I am very sure that 
-                        my experience and my skills earned in the previous years as a freelancer will 
-                        be a valuable asset to the company.</p>
-                </div>
-                <div id="image-container">
-                    <a href="https://ibb.co/3dt6NgQ"><img src="https://i.ibb.co/W5S8ymj/Box-Illustration-Final.png" alt="Box-Illustration-Final" border="0" id="box-illustration"></a>
-                </div>
-            </section>
-            <section id="projects">
-                <h2>These are some of my projects</h2>
-                <div class="project-tile">
-                    <a href="">
-                        <a href="https://ibb.co/9THhNKx"><img src="https://i.ibb.co/Fw4XKZQ/Spyro-Screenshot.jpg" alt="Spyro-Screenshot" border="0" id="spyro-screenshot"></a>
-                        <p>Tribute Web Page</p>
-                    </a>
-                </div>
-            </section>
+            <div class="row">
+                <section id="presentation" class="col-12">
+                    <div id="title-and-description" class="col-6">
+                        <h2>Hi, I'm Daniel. A web developer</h2>
+                        <p>A hard working guy who is always looking for new things to learn. I am a Digital Animator
+                            switching to a Front End Developer with experience 
+                            in HTML, CSS  and JavaScript. I have helped customers to materialize their 
+                            ideas into awesome animations that caught up the attention of many people 
+                            in their social medias, increasing the number of followers.I am very sure that 
+                            my experience and my skills earned in the previous years as a freelancer will 
+                            be a valuable asset to the company.</p>
+                    </div>
+                    <div id="image-container" class="col-6">
+                        <a href="https://ibb.co/3dt6NgQ"><img src="https://i.ibb.co/W5S8ymj/Box-Illustration-Final.png" alt="Box-Illustration-Final" border="0" id="box-illustration"></a>
+                    </div>
+                </section>
+            </div>
+            <div class="row">
+                <section id="projects">
+                    <h2>These are some of my projects</h2>
+                    <div class="project-tile">
+                        <a href="">
+                            <a href="https://ibb.co/9THhNKx"><img src="https://i.ibb.co/Fw4XKZQ/Spyro-Screenshot.jpg" alt="Spyro-Screenshot" border="0" id="spyro-screenshot"></a>
+                            <p>Tribute Web Page</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
         </main>
         <footer>
             <section id="contact">
@@ -61,8 +66,8 @@
                 <div class="contact-box">
                     <a href="https://www.linkedin.com/in/daniel-alejandro-rua-rendon-7b9109162/" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
                     <a href="https://www.freecodecamp.org/certification/Alejorua04/responsive-web-design" target="_blank"><i class="fa-brands fa-free-code-camp"></i>Free Code Camp</a>
-                    <a href=""><i class="fa-solid fa-mobile"></i>Call me</a>
-                    <a href=""><i class="fa-brands fa-google"></i>Send a email</a>
+                    <a href="tel:+573134386640"><i class="fa-solid fa-mobile"></i>Call me</a>
+                    <a href="mailto:alejorua04@gmail.com"><i class="fa-brands fa-google"></i>Send a email</a>
                 </div>
                 <hr>
                 <div class="contact-box">
